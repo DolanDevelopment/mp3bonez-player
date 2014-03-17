@@ -1,15 +1,15 @@
 <?php
 	/**
 	 * Plugin Name: Mp3 Bonez Player
-	 * Plugin URI: http://github.com
-	 * Description: mp3 and wave player based on Wavesurfer.js
+	 * Plugin URI: https://github.com/DolanDevelopment/mp3bonez-player
+	 * Description: Wordpress mp3 player and visualizer based on WavesurferJS
 	 * Version: 1.0
 	 * Author: Ryan Dolan
 	 * Author URI: http://rdd-soft.com
 	 * License: GPL2
 	 */
 
-	/*  Copyright 2014  Ryan Dolan  (email : ryanddolan@hotmail.com)
+	/*  Copyright 2014  Ryan Dolan  (email : DolanDevelopment@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -131,5 +131,5 @@
 
 	add_action('init', 'initialize');
 
-	add_shortcode('mp3bonez', 'create_player');
+	add_shortcode('mp3bonez-player', 'create_player');
 ?>
