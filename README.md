@@ -9,7 +9,7 @@ mp3bonez-player is a fully responsive Wordpress mp3 player based on WavesurferJS
 
 ### Wordpress Shortcode
 
-TODO: Insert WP URL
+(Pending Review at Wordpress.org)
 
 #### URL Source Example 
 
