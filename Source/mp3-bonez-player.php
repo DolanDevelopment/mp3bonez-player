@@ -2,7 +2,7 @@
 	/**
 	 * Plugin Name: Mp3 Bonez Player
 	 * Plugin URI: https://github.com/DolanDevelopment/mp3bonez-player
-	 * Description: Wordpress mp3 player and visualizer based on WavesurferJS
+	 * Description: Wordpress responsive mp3 player and visualizer based on WavesurferJS
 	 * Version: 1.0
 	 * Author: Ryan Dolan
 	 * Author URI: http://rdd-soft.com
