@@ -1,4 +1,4 @@
-mp3bonez-player (Inspired by and conspired with) http://bonez.soundbyter.com/
+mp3bonez-player (Inspired by and conspired with) http://mp3bonez.com
 ===============
 
 mp3bonez-player is a fully responsive Wordpress mp3 player based on WavesurferJS
