@@ -51,6 +51,7 @@
 		}
 	}
 
+
 	//http://guid.us/GUID/PHP (modified to remove curly brackets)
 	function getGUID(){
 	    if (function_exists('com_create_guid')){
@@ -102,6 +103,9 @@
 		$fileName = basename($srcPath);
 		$guid = getGUID();
 
+		$registered = wp_get_current_user()->ID > 0;
+		$downloadAnchor = $registered ? "<a href='{$srcPath}' type='application/octet-stream' download='{$fileName}'>download</a>" : "";
+
 		return "
 			<div id='{$guid}' src='{$srcPath}' style='width: {$containerWidth};' class='mp3-bonez'>
 				<div class='wave'></div>
@@ -111,7 +115,7 @@
 				<div class='button-container' style='width: {$buttonContainerWidth};'>
 					<div class='button'><img src='{$play}' /></div>
 					<div class='button'><img src='{$stop}' /></div>
-					<a href='{$srcPath}' type='application/octet-stream' download='{$fileName}'>download</a>
+					{$downloadAnchor}
 				</div>
 				<div class='clear'></div>
 			</div>		
