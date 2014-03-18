@@ -15,6 +15,10 @@ window.mp3bonez = (function(){
 						progressColor, 
 						responsizeLayout) {
 
+			if (!(window.AudioContext || window.webkitAudioContext)) {
+	            return;
+	        }
+
 			var wavesurfer = Object.create(WaveSurfer);
 			var playing = false;
 
