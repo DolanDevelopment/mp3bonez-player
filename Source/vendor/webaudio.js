@@ -5,9 +5,10 @@ WaveSurfer.WebAudio = {
 
     init: function (params) {
         if (!(window.AudioContext || window.webkitAudioContext)) {
-            throw new Error(
-                'wavesurfer.js: your browser doesn\'t support WebAudio'
-            );
+            //throw new Error(
+            //    'wavesurfer.js: your browser doesn\'t support WebAudio'
+            //);
+            return;
         }
         this.params = params;
         this.loopSelection = this.params.loopSelection;
