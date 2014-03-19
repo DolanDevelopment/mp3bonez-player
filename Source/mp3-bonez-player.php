@@ -102,7 +102,7 @@
 		$fileName = basename($srcPath);
 		$guid = getGUID();
 
-		$registered = wp_get_current_user()->ID > 0;
+		$registered = is_user_logged_in();
 		$downloadAnchor = $registered ? "<a href='{$srcPath}' type='application/octet-stream' download='{$fileName}'>download</a>" : "";
 
 		return "
