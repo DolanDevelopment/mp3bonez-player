@@ -35,14 +35,13 @@
 		if (function_exists('wp_enqueue_script')) {
 
 			// for new libraries
-			wp_register_script('jquery_1_11_0', get_bloginfo('wpurl') . '/wp-content/plugins/mp3-bonez-player/vendor/jquery-1.11.0.min.js');
 			wp_register_script('wavesurfer', get_bloginfo('wpurl') . '/wp-content/plugins/mp3-bonez-player/vendor/wavesurfer.js');
 			wp_register_script('wavesurfer_drawer', get_bloginfo('wpurl') . '/wp-content/plugins/mp3-bonez-player/vendor/drawer.js');
 			wp_register_script('wavesurfer_drawer_canvas', get_bloginfo('wpurl') . '/wp-content/plugins/mp3-bonez-player/vendor/drawer.canvas.js');
 			wp_register_script('webaudio', get_bloginfo('wpurl') . '/wp-content/plugins/mp3-bonez-player/vendor/webaudio.js');
 			wp_register_script('mp3_bonez', get_bloginfo('wpurl') . '/wp-content/plugins/mp3-bonez-player/mp3bonez.js');
 			
-			wp_enqueue_script('jquery_1_11_0');
+			wp_enqueue_script('jquery');
 			wp_enqueue_script('wavesurfer');
 			wp_enqueue_script('wavesurfer_drawer');
 			wp_enqueue_script('wavesurfer_drawer_canvas');
