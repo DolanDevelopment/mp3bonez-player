@@ -121,10 +121,10 @@
 			<script type='text/javascript'>
 				(function(){
 					var element = document.getElementById('{$guid}');
-					var waveElement = $(element).find('.wave').get()[0];
-					var timeElement = $(element).find('.time').get()[0];
-					var maskElement = $(element).find('.mask').get()[0];
-					var loadingElement = $(element).find('.loading').get()[0];
+					var waveElement = jQuery(element).find('.wave').get()[0];
+					var timeElement = jQuery(element).find('.time').get()[0];
+					var maskElement = jQuery(element).find('.mask').get()[0];
+					var loadingElement = jQuery(element).find('.loading').get()[0];
 					var responsive = {$responsive} ? true : false;
 					window.mp3bonez.createPlayer(element, waveElement, timeElement, maskElement, loadingElement, {$width}, {$height}, '{$pluginDir}', '{$wave_color}', '{$progress_color}', responsive);
 				})();
