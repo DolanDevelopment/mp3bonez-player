@@ -22,8 +22,8 @@ window.mp3bonez = (function(){
 			var wavesurfer = Object.create(WaveSurfer);
 			var playing = false;
 
-			var playPauseButton = $('#' + element.id + '.mp3-bonez .button:first-child');
-			var stopButton = $('#' + element.id + '.mp3-bonez .button:nth-child(2)');
+			var playPauseButton = jQuery('#' + element.id + '.mp3-bonez .button:first-child');
+			var stopButton = jQuery('#' + element.id + '.mp3-bonez .button:nth-child(2)');
 
 			wavesurfer.init({
 			    container: waveElement, // first child of the container
@@ -54,11 +54,11 @@ window.mp3bonez = (function(){
 		    	playPauseButton.find('img').attr('src', pluginDir + 'content/pause-white.png');
 			}
 			function resizePlayer(waveLoaded){
-				var width = $(element.parentElement).width();
-				$(element).width(width);
-				$(element).find('.mask').width(width + 2);
-				$(element).find('.button-container').width(width + 2);
-				$(loadingElement).css('left', ((width / 2) - 50).toString() + 'px');
+				var width = jQuery(element.parentElement).width();
+				jQuery(element).width(width);
+				jQuery(element).find('.mask').width(width + 2);
+				jQuery(element).find('.button-container').width(width + 2);
+				jQuery(loadingElement).css('left', ((width / 2) - 50).toString() + 'px');
 				wavesurfer.drawer.containerWidth = wavesurfer.drawer.container.clientWidth;
 				if (waveLoaded)
 					wavesurfer.drawBuffer();
@@ -88,9 +88,9 @@ window.mp3bonez = (function(){
 			wavesurfer.on('ready', function(result){
 				timeElement.innerHTML = '<p>0.00:' + wavesurfer.getDuration().toFixed(2) + '</p>';
 
-				$(timeElement).css('opacity', 0.5);
-				$(loadingElement).css('display', 'none');
-				$(element).css('opacity', 1);
+				jQuery(timeElement).css('opacity', 0.5);
+				jQuery(loadingElement).css('display', 'none');
+				jQuery(element).css('opacity', 1);
 
 				if (responsizeLayout)
 					resizePlayer(true);				
@@ -103,12 +103,12 @@ window.mp3bonez = (function(){
 
 			// responsive layout
 			if (responsizeLayout){
-				$(window).on('resize', function(){
+				jQuery(window).on('resize', function(){
 					resizePlayer(true);
 				});
 			}
 
-			$(timeElement).css('opacity', 0);
+			jQuery(timeElement).css('opacity', 0);
 			wavesurfer.load(element.getAttribute('src'));
 			if (responsizeLayout)
 				resizePlayer(false);
